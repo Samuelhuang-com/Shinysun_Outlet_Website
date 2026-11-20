@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>活動管理預覽｜日曜天地 OUTLET</title>
+<link rel="icon" href="sun.svg">
+<link rel="stylesheet" href="style.css">
+<script src="data.js" defer></script><script src="editor.js" defer></script>
+</head>
+<body><header class="header"><div class="wrap nav"><a class="brand" href="./"><img src="sun.svg" alt="" width="42" height="42"><span><strong>日曜天地</strong><small>SHINYSUN OUTLET</small></span></a><a class="text-link" href="./">返回首頁</a></div></header>
+<main class="wrap section editor">
+<h1>活動管理預覽</h1>
+<p>活動草稿儲存在此瀏覽器。可設定上架與下架日期、關聯品牌，並檢查手機版。</p>
+<label id="saved">選擇活動<select id="items"><option value="">新增活動</option></select></label>
+<form id="form">
+<div class="editor-grid">
+<label>活動名稱<input name="title" maxlength="70" required></label>
+<label>活動分類<select name="category"><option>全館活動</option><option>品牌優惠</option><option>刷卡禮</option></select></label>
+<label>主打文案<input name="headline" maxlength="55" required></label>
+<label>適用範圍<input name="scope" placeholder="例如全館或指定樓層" required maxlength="90"></label>
+<label>關聯品牌<select name="brand" id="linked-brand"><option value="">不限品牌</option></select></label>
+<label>活動連結<input name="url" type="url" placeholder="https://"></label>
+<label>上架日期<input name="start" type="date"></label>
+<label>最後有效日<input name="end" type="date"></label>
+<label class="full">適用條件與說明<textarea name="description" rows="3" maxlength="1000" required></textarea></label>
+<label class="check"><span><input style="width:auto" type="checkbox" name="featured"> 設為首頁主活動</span></label>
+</div>
+<div class="editor-actions"><button class="button" type="submit">儲存草稿</button><button class="button outline" type="button" id="remove">刪除這筆草稿</button><button class="button outline" type="button" id="download">匯出活動 JSON</button></div>
+<p id="status" role="status"></p>
+</form>
+<h2>手機版預覽</h2><p><a href="./?preview=1" target="_blank" rel="noopener" class="text-link">另開全螢幕預覽</a></p>
+<iframe id="preview" title="日曜天地 390px 手機版預覽" src="./?preview=1" loading="lazy"></iframe>
+</main></body></html>
